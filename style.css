@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    line-height: 1.5;
+}
+header .header-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-head .links{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 55%;
+    
+}
+header .header-head .links li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    /* transition: all 0.2s ease; */
+}
+
+header .header-head .links li:hover a{
+    border-bottom: solid 2px RED;
+    border-radius: 5px;
+}
+
+/* 
+header .header-head .links li{
+    display: inline;
+} */
+
+header h1{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.fa-solid{
+    font-size: 19px;
+    font-weight: 900;
+}
+.hero{
+    background-color: #f0f0f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .content{
+    width: 70%;
+    /* align-self: center; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.txt{
+    max-width: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.txt h1{
+    display: block;
+    font-size: 3em;
+    /* margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+    font-weight: bold;
+    unicode-bidi: isolate;
+    color: #0b1c39;
+}
+.txt p{
+    font-weight: 400;
+    font-size: 18px;
+    width: 100%;
+}
+.hero img{
+    align-self: flex-end;
+    width: 20%;
+    height: 100%;
+}
+
+.btn{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 3px;
+    background-color: #4a4a4b;
+    color: white;
+    font-size: 19px;
+    font-weight: 800;
+    border: 1px solid;
+    transition: all 0.5s ease;
+    animation: btn;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}
+.btn:hover{
+    background-color: #ff2020;
+}
+
+.new-arrivals{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding-left: 50px;
+}
+.new-arrivals h2{
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+.new-arrivals .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.new-arrivals .cards .card{
+    max-width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    justify-items: stretch;
+    
+}
+
+
+
+.new-arrivals .cards img{
+    transition: all 2s ease;
+    
+    width: 100%;
+    min-width: 480px;
+    /* min-height: 400px; */
+    height: auto;
+    transition: all 0.5 ease;
+}
+
+.new-arrivals .cards div{
+    overflow: hidden;
+}
+
+.new-arrivals .cards .card:hover img {
+  transform: scale(1.1); 
+  /* overflow: hidden; */
+}
+
+.txt h1, 
+.txt p{
+  opacity: 0;
+  animation: fadeText; 
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.txt h1 {
+  animation-delay: 0s;
+}
+
+.txt p {
+  animation-delay: 2s;
+}
+
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+    color: black;
+    transform: translateY(20px);
+  }
+  20% {
+    opacity: 1;
+    color: red;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 1;
+    color: blue;
+  }
+  80% {
+    opacity: 0.5;
+    color: green;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 0;
+    color: black;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes btn {
+    0%{
+        background-color: #0b1c39;
+    }
+    50%{
+        background-color: rgb(5, 150, 77);
+    }
+    100%{
+        background-color: rgb(40, 53, 126);
+    }
+}
